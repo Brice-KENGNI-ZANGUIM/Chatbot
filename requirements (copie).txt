@@ -1,0 +1,7 @@
+multidict
+botbuilder-testing==4.13.0
+opencensus-ext-azure
+unittest2
+opencensus
+aiohttp==3.6.2
+emoji==1.7

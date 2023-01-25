@@ -63,7 +63,6 @@ TELEMETRY_CLIENT = ApplicationInsightsTelemetryClient(
 # TELEMETRY_LOGGER_MIDDLEWARE = TelemetryLoggerMiddleware(telemetry_client=TELEMETRY_CLIENT, log_personal_information=True)
 # ADAPTER.use(TELEMETRY_LOGGER_MIDDLEWARE)
 
-
 # Create dialogs and Bot
 RECOGNIZER = FlightBookingRecognizer(CONFIG)
 BOOKING_DIALOG = BookingDialog(RECOGNIZER)
@@ -94,6 +93,8 @@ def init_func(argv):
     APP = web.Application(middlewares=[bot_telemetry_middleware, aiohttp_error_middleware])
     APP.router.add_post("/api/messages", messages)
     return APP
+
+print("OK")
 
 if __name__ == "__main__":
     APP = init_func(None)

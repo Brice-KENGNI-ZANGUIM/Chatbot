@@ -14,9 +14,10 @@ class DefaultConfig:
     PORT = 8000
     
     # paramètres du bot chanel
-    MS_APP_TYPE = os.environ.get("MS_APP_TYPE", "UserAssignedMSI")
-    APP_ID = os.environ.get("MS_APP_ID", "a14024c2-5b7e-422d-b511-b4412b54b6e3")
-    MS_APP_TENANT_ID = os.environ.get("MS_APP_TENANT_ID", "4677c631-e98a-4236-b8b1-4b754fb6798c")
+    #MS_APP_TYPE = os.environ.get("MS_APP_TYPE", "UserAssignedMSI")
+    #MS_APP_TENANT_ID = os.environ.get("MS_APP_TENANT_ID", "4677c631-e98a-4236-b8b1-4b754fb6798c")
+    
+    APP_ID = os.environ.get("MS_APP_ID", "")
     APP_PASSWORD = os.environ.get("MS_APP_PASSWORD", "")
     
     # Paramètres de l'application LUIS

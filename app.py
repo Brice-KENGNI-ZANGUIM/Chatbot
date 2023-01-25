@@ -63,6 +63,7 @@ TELEMETRY_CLIENT = ApplicationInsightsTelemetryClient(
 # TELEMETRY_LOGGER_MIDDLEWARE = TelemetryLoggerMiddleware(telemetry_client=TELEMETRY_CLIENT, log_personal_information=True)
 # ADAPTER.use(TELEMETRY_LOGGER_MIDDLEWARE)
 
+
 # Create dialogs and Bot
 RECOGNIZER = FlightBookingRecognizer(CONFIG)
 BOOKING_DIALOG = BookingDialog(RECOGNIZER)

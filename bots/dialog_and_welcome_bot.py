@@ -74,7 +74,7 @@ class DialogAndWelcomeBot(DialogBot):
             if member.id != turn_context.activity.recipient.id:
                 return await turn_context.send_activity(
                     MessageFactory.text(
-                        "What can I help you with today?",
+                        "Hello dear, How can i help you today ?",
                         input_hint=InputHints.expecting_input
                     )
                 )

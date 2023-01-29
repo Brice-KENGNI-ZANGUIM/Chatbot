@@ -5,7 +5,7 @@ ENV VIRTUAL_ENV=/venv
 RUN virtualenv venv -p python3
 ENV PATH="VIRTUAL_ENV/bin:$PATH"
 
-WORKDIR /recommandation_app
+WORKDIR /Chatbot
 
 COPY requirements.txt ./requirements.txt
 
@@ -14,16 +14,17 @@ RUN pip3 install -r requirements.txt
 
 # Exposition de l'application sur le port
 #ENV PORT 8501
-EXPOSE 8501
+EXPOSE 8000
 
 # copying all files over
-COPY . /recommandation_app
+COPY . /Chatbot
 
 # commande à exécuter lorsque le contenaire est lancé
 #CMD streamlit run streamlit_main.py
 #ENTRYPOINT [ "streamlit", "run", "streamlit_main.py" , "--server.port=8501", "--server.address=127.0.0.1" ]
-ENTRYPOINT [ "streamlit", "run" ]
-CMD [ "streamlit_main.py"]
+ENTRYPOINT ["python3.9", "-m", "aiohttp.web" ,"-H" ,"0.0.0.0" ,"-P", "8000" ,"app:init_function"]
+#ENTRYPOINT [ "streamlit", "run" ]
+#CMD [ "streamlit_main.py"]
 
 # configuration spécifiques à Streamlit
 #ENV LC_ALL=C.UTF-8

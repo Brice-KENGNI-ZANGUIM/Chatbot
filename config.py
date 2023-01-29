@@ -25,6 +25,9 @@ class DefaultConfig:
     LUIS_API_KEY = os.environ.get("LUIS_API_KEY", "c70ae1e5cdbe472f89372fa51a83e4bd")
     LUIS_API_HOST_NAME = os.environ.get("LUIS_API_HOSTNAME", "westeurope.api.cognitive.microsoft.com")
     
+    # App insights
+    APPINSIGHTS_INSTRUMENTATION_KEY = os.environ.get("APP_INSIGHT_INSTRUMENTATION_KEY", "46639a3f-b5a2-41f3-ac4f-d7314832ea54")
+    #APPINSIGHTS_INSTRUMENTATION_KEY = os.environ.get("APP_INSIGHT_INSTRUMENTATION_KEY", "dfd0528d-bc19-41d9-acf8-7a0f5e5b482d")
+
     # Paramètres de l'application Tequila
-    APPINSIGHTS_INSTRUMENTATION_KEY = os.environ.get("APP_INSIGHT_INSTRUMENTATION_KEY", "dfd0528d-bc19-41d9-acf8-7a0f5e5b482d")
     TEQUILA_KIWI_API_KEY = os.environ.get("TEQUILA_KIWI_API_KEY", "fuwgIOd_zIUDReKpxyeB0QX6AJA2lDF1")
